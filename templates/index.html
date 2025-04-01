@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>When Will AI Compute Outpace U.S. Electricity Capacity?</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-top: 1.2em;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+        }
+
+        .executive-summary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+        }
+
+        .visualization {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .visualization-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 1.2em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        .footnote {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .data-point {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 3px solid #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>When Will AI Power Demands Outpace U.S. Capacity?</h1>
+        
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>AI development is driving a surging demand for electricity that could soon strain the U.S. power grid. Our analysis finds that under current trends, AI compute growth may collide with U.S. electricity supply as early as 2028, with high-demand scenarios even indicating a crunch by mid-2026.</p>
+            
+            <ul>
+                <li><strong>Explosive Power Demand:</strong> U.S. data centers consumed >4% of U.S. electricity in 2023, and could reach 9–12% by 2028.</li>
+                <li><strong>Grid Expansion Lag:</strong> The U.S. grid's generation capacity is not expanding fast enough in firm power.</li>
+                <li><strong>Bottleneck Timeline:</strong> Base-case scenario suggests electricity supply constrains AI scaling by 2028.</li>
+                <li><strong>Mitigation Limits:</strong> Quick fixes face significant challenges and may not arrive in time.</li>
+            </ul>
+        </div>
+
+        <div class="visualization">
+            <div class="visualization-title">Total Generation Trends and Projections</div>
+            {{ plot5 | safe }}
+        </div>
+
+        <h2>Insight #1: AI's Rapidly Growing Power Demand</h2>
+        <p>The computing power behind modern AI is enormous – and so is its appetite for electricity. As models like OpenAI's GPT-4 and beyond scale up, the servers and cooling systems that train and run these models draw massive power. In 2023, U.S. data centers consumed roughly 4–5% of all U.S. electricity.</p>
+
+        <div class="data-point">
+            <strong>Key Data Point:</strong> A single large data center can equal the demand of ~50,000 homes. AI "hyperscale" centers housing tens of thousands of GPUs are being built by firms like Google, Meta, Microsoft, and OpenAI, accounting for ~8% of data center capacity (≈3 GW in 2023).
+        </div>
+
+        <p>While non-AI data center demand grows ~8–10% annually, AI computing demand (for training and large-scale inference) is estimated to be growing ~40–50% annually in power terms. NVIDIA alone could ship 1.5 million AI server units by 2027 (6.5–10 kW each), adding an 85–134 TWh/year incremental consumption.</p>
+
+        <h3>Scenario Outlook: When Does Supply Constrain AI Scaling?</h3>
+        <ul>
+            <li>🚩 <strong>High AI Growth, Slow Grid Build-Out:</strong> Bottleneck by ~Mid-2026</li>
+            <li>⚖️ <strong>Base Case:</strong> Bottleneck by ~2028</li>
+            <li>✅ <strong>Low AI Growth / Accelerated Build:</strong> No Bottleneck until ~2030+</li>
+        </ul>
+
+        <h2>Insight #2: U.S. Generation Capacity: Current Mix vs. Expansion Plans</h2>
+        <p>The United States currently has about 1,300 GW of installed generation capacity spread across thousands of power plants. The mix is dominated by legacy fossil-fuel units and older renewables:</p>
+
+        <ul>
+            <li><strong>Natural Gas:</strong> ~560 GW (≈44% of capacity) - the largest category, including efficient combined-cycle plants and peaking gas turbines</li>
+            <li><strong>Coal:</strong> ~200 GW (16%), though declining</li>
+            <li><strong>Nuclear:</strong> ~105 GW (8%) across 92 reactors</li>
+            <li><strong>Hydropower:</strong> ~100 GW (8%) of dams and hydro stations</li>
+            <li><strong>Wind:</strong> ~150 GW (12%) of mostly onshore wind farms</li>
+            <li><strong>Solar:</strong> ~115 GW (9%) utility-scale and rooftop PV combined</li>
+            <li><strong>Other:</strong> ~70 GW (5%) of miscellaneous sources</li>
+        </ul>
+
+        <div class="visualization">
+            <div class="visualization-title">Cumulative Power Plant Capacity by Source</div>
+            {{ plot2 | safe }}
+        </div>
+
+        <div class="visualization">
+            <div class="visualization-title">Total Cumulative Power Plant Capacity</div>
+            {{ plot1 | safe }}
+        </div>
+
+        <h2>Insight #3: Grid Bottlenecks and Infrastructure Challenges</h2>
+        <p>Beyond raw generation capacity, technical grid constraints pose serious challenges to powering AI growth. Key issues include:</p>
+
+        <ul>
+            <li><strong>Interconnection Queues & Delays:</strong> Getting new power plants connected to the grid can take 5+ years. Project developers cite interconnection study delays as a top reason for missed online dates.</li>
+            <li><strong>Transmission Constraints:</strong> Many of the cheapest renewable resources are far from data center hubs. New high-voltage transmission lines are notoriously slow to build (often 8–15 years of permitting and construction).</li>
+            <li><strong>Natural Gas Fuel Siting:</strong> In regions like New England or New York, gas pipeline capacity is constrained – it's hard to site new pipelines due to environmental opposition.</li>
+            <li><strong>Permitting and Local Opposition:</strong> Federal environmental reviews average ~4.5 years just for the review (Environmental Impact Statement).</li>
+        </ul>
+
+        <div class="data-point">
+            <strong>Key Data Point:</strong> Only ~19% of projects (14% of capacity) in queues from 2000–2018 were built, often due to financing, permitting, or interconnection hurdles. The backlog grew 30% in 2023 alone.
+        </div>
+
+        <div class="visualization">
+            <div class="visualization-title">Installed Capacity vs Queues (2010 vs 2023)</div>
+            {{ plot3 | safe }}
+        </div>
+
+        <h3>Case Studies: Data Centers vs. the Grid</h3>
+        <p>Several real-world cases already illustrate the collision between AI/data center ambitions and electrical infrastructure:</p>
+
+        <ul>
+            <li><strong>Northern Virginia "Data Center Alley":</strong> The Ashburn, VA area has ~2,000 MW of installed data center capacity and was adding hundreds of MW per year. In 2022, Dominion Energy warned it couldn't meet new data center power requests until transmission upgrades in 2026.</li>
+            <li><strong>Microsoft's Canceled 2 GW of Data Centers:</strong> In late 2024, Microsoft abandoned or deferred agreements for about "a couple hundred megawatts" each with several colocation data center operators – totaling ~2 GW of would-be capacity.</li>
+            <li><strong>Amazon's Pursuit of Dedicated Power:</strong> AWS sought to colocate data centers adjacent to a 2.5 GW nuclear plant and directly feed them, initially getting approval for 300 MW "behind-the-meter" usage.</li>
+        </ul>
+
+        <div class="data-point">
+            <strong>Key Data Point:</strong> NextEra Energy (major utility) expects U.S. power demand to jump 55% in 20 years, largely due to data centers and electrification, compared to only 9% growth in the past 20 years.
+        </div>
+
+        <h3>Mitigation Options and Economic Feasibility</h3>
+        <p>To avoid electricity shortfalls constraining AI, several solutions are being considered:</p>
+
+        <ul>
+            <li><strong>Fast-Track Natural Gas Generation:</strong> A modern combined-cycle gas plant (500+ MW) can be built in ~2–3 years once permitted, with costs around $900–$1,200 per kW installed.</li>
+            <li><strong>Carbon Capture and Storage (CCS):</strong> The only major power-plant CCS project in the U.S. – NRG's Petra Nova (240 MW) – faced cost overruns and was mothballed in 2020.</li>
+            <li><strong>Nuclear (Small Modular Reactors):</strong> No SMR will likely be online before 2028–2029 at best, with projected costs over $5,000/kW.</li>
+            <li><strong>Renewables + Storage:</strong> The U.S. added ~40 GW of new capacity in 2023 (mostly solar/storage), but net generation barely grew because much was variable or replacing retiring coal.</li>
+        </ul>
+
+        <div class="footnote">
+            <p>Sources: Data and projections were drawn from U.S. government reports (EIA, FERC), grid operator studies, industry analyses, and recent research. Key references include the MIT Energy Initiative's 2025 report on powering AI, Lawrence Berkeley National Lab's interconnection queue study, Electric Power Research Institute and Goldman Sachs estimates.</p>
+        </div>
+    </div>
+</body>
+</html> 
